@@ -35,11 +35,11 @@ var map = L.map('map', {
 // beginning of function chain to initialize
 /*function getMeta() {
 	queue()
-		.defer(d3.csv, "https://dl.dropboxusercontent.com/u/59360120/Ethiopia_Mapfolio-Website/ethiopia-maps.csv")
+		.defer(d3.csv, "https://www.dropbox.com/s/3lypcvz5z1hm7oh/ethiopia-maps.csv?dl=1")
 		.await(generateThumbnails);
 }*/
 function getMeta() {
-  d3.csv("https://dl.dropboxusercontent.com/u/59360120/Ethiopia_Mapfolio-Website/ethiopia-maps.csv", function(metadata){
+  d3.csv("https://www.dropbox.com/s/3lypcvz5z1hm7oh/ethiopia-maps.csv?dl=1", function(metadata){
     generateThumbnails(metadata);
   });
 }
