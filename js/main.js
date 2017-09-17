@@ -35,11 +35,11 @@ var map = L.map('map', {
 // beginning of function chain to initialize
 /*function getMeta() {
 	queue()
-		.defer(d3.csv, "https://www.dropbox.com/s/3lypcvz5z1hm7oh/ethiopia-maps.csv?dl=1")
+		.defer(d3.csv, "https://dl.dropboxusercontent.com/s/3lypcvz5z1hm7oh/ethiopia-maps.csv")
 		.await(generateThumbnails);
 }*/
 function getMeta() {
-  d3.csv("https://www.dropbox.com/s/3lypcvz5z1hm7oh/ethiopia-maps.csv?dl=1", function(metadata){
+  d3.csv("https://dl.dropboxusercontent.com/s/3lypcvz5z1hm7oh/ethiopia-maps.csv", function(metadata){
     generateThumbnails(metadata);
   });
 }
@@ -54,7 +54,7 @@ function generateThumbnails(metadata){
         linkHtml = '<p style="font-size:small; margin:6px 0 0 10px;"><b>Source:</b> <a class="item-link" href="'+item.link+'" target="_blank">'+item.link+'</a></p>';
     };
     var itemHtml = '<div onclick="callModal(this);" class="thumbnail">'+
-        '<img class="lazy" data-original="https://dl.dropboxusercontent.com/u/59360120/Ethiopia_Mapfolio-Website/thumb/'+item.filename.slice(0,-4)+'_thumb.jpg'+'" width="300" height="200">'+
+        '<img class="lazy" data-original="https://dl.dropboxusercontent.com/sh/gfc4lgqpp95b3wv/AACU7CrIwQQdn_o7Tjej8SfSa/'+item.filename.slice(0,-4)+'_thumb.jpg'+'" width="300" height="200">'+
         '<div class="caption">'+
             '<h5 style="font-weight:bold;">'+item.title+'</h5>'+
             '<p style="font-size:small; margin:6px 0 0 0;">' + formatDate(new Date(item.date)) +'</p>'+
